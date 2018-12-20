@@ -243,7 +243,7 @@ class ClassMobil
       ?>
       <script>
         var cnf = confirm("Akun anda berhasil di buat silahkan Login")
-        if (cnf) {location.href='../webrentalmobil/index.php'}
+        if (cnf) {location.href='../rentalku/index.php'}
       </script>
       <?php
     }else{
@@ -262,14 +262,14 @@ class ClassMobil
 	  $_SESSION['userid'] = $row['id'];
       $_SESSION['namamember'] = $row['username'];
       $_SESSION['nama'] = $row['nama_lengkap'];
-      echo "<meta http-equiv='refresh' content='0; url=../webrentalmobil/index.php'>";
+      echo "<meta http-equiv='refresh' content='0; url=../rentalku/index.php'>";
   }else{
     ?>
   <script type="text/javascript">
     alert("Username dan password tidak terdaftar...!!!");
   </script>
 <?php
-  echo "<meta http-equiv='refresh' content='0; url=../webrentalmobil/index.php'>";
+  echo "<meta http-equiv='refresh' content='0; url=../rentalku/index.php'>";
   }
   }
   public function deleteCustomer($id)
@@ -354,7 +354,7 @@ class ClassMobil
       echo "
       <script>
         var cnf = confirm('Pesanan anda sedang di proses, silahkan melakukan pembayaran');
-        if (cnf) {location.href='../webrentalmobil/bayar.php?kodebooking=$kode'}
+        if (cnf) {location.href='../rentalku/bayar.php?kodebooking=$kode'}
       </script>
       ";
     }else{
