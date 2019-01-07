@@ -11,7 +11,7 @@ $do = new ClassMobil();
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Rental mobil</title>
+<title>Rental Kamera</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Green Wheels Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -80,10 +80,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
 	<div class="container">
 		<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-			<a href="index.php">Rental <span>Mobil</span></a>	
+			<a href="index.php">Rental <span>Kamera</span></a>	
 		</div>
 		<div class="bus wow fadeInUp animated" data-wow-delay=".5s">
-            <a href="bus.php" class="buses active">Daftar Mobil</a>
+            <a href="bus.php" class="buses active">Daftar Kamera</a>
         </div>
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
 			<li><i class="fa fa-lock"></i></li>
@@ -135,14 +135,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 	<div class="col-md-5 bann-info1 wow fadeInLeft animated" data-wow-delay=".5s">
 		<i class="fa fa-columns"></i>
-		<h3>Rental mobil murah</h3>
+		<h3>Rental Kamera Murah</h3>
 	</div>
 	<div class="col-md-7 bann-info wow fadeInRight animated" data-wow-delay=".5s">
-		<h2 style="background: #EAEAEA; text-align: center; padding: 5px;">Rental Mobil Online dengan Harga terjangkau</h2>
+		<h2 style="background: #EAEAEA; text-align: center; padding: 5px;">Rental Kamera Murah Harga terjangkau</h2>
 		<div class="ban-top">
 			<div class="bnr-left">
 			<form method="POST" action="cari.php" onsubmit="return validasi_input(this)">
-				<label class="inputLabel">Mobil</label>
+				<label class="inputLabel">KAMERA</label>
 				<select name="nama">
 					<option value="pilih">-- pilih --</option>
 								<?php
@@ -180,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="clearfix"></div>
 				<div class="sear">
-				<button class="seabtn" name="cari" id="cari">Cari Mobil</button>
+				<button class="seabtn" name="cari" id="cari">Cari Kamera</button>
 				</div>
 				</form>
 
@@ -190,11 +190,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--- /banner ---->
 <!--- /routes ---->
-<!--- footer-top ---->
+
+<!--- footer-top 
 <div class="footer-top">
 	<div class="container">
 		<div class="col-md-6 footer-left wow fadeInLeft animated" data-wow-delay=".5s">
-			<h3>Kategori Mobil</h3>
+			<h3>Kategori Kamera</h3>
 				<ul>
 				 <?php
 			$row = $do->selectMerek();
@@ -223,7 +224,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"></div>
 	</div>
-</div>
+</div> 
+---->
+
 <!--- /footer-top ---->
 <!---copy-right ---->
 <div class="copy-right">

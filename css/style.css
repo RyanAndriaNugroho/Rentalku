@@ -142,7 +142,7 @@ i.fa.fa-lock {
 /*-- /header --*/
 /*-- banner --*/
 .banner {
-    background: url(../images/head.jpg)no-repeat;
+    /*background: url(../images/head.jpg)no-repeat;*/
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
