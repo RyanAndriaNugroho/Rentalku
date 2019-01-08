@@ -11,7 +11,7 @@ $do = new ClassKamera();
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Rental mobil</title>
+<title>Rental Kamera</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Green Wheels Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--- banner-1 ---->
 <div class="banner-1">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Rental Mobil - Sewa mobil Murah</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Rental Kamera Murah</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
@@ -286,7 +286,7 @@ function printContent(el){
 				<li><a class="googleplus" href="#"><span>Google+</span></a></li>
 			</ul>
 		</div>
-		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© 2017 Rental Mobil . All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">MH3</a> </p>
+		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© 2018 Rental Kamera . All Rights Reserved |</p>
 	</div>
 </div>
 <!--- /copy-right ---->

@@ -1,6 +1,6 @@
 <?php 
 include 'admin/proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <?php
 session_start();
