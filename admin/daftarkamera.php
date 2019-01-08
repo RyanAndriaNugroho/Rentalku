@@ -1,6 +1,6 @@
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <div class="main-content">
 				<div class="main-content-inner">
@@ -17,7 +17,7 @@ $do = new ClassMobil();
 
 						<div class="page-header">
 							<h1>
-								Daftar Mobil
+								Daftar Kamera
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -29,18 +29,12 @@ $do = new ClassMobil();
 										<table id="simple-table" class="table  table-bordered table-hover">
 											<thead>
 												<tr>
-													<th class="hidden-480">Nama Mobil</th>
+													<th class="hidden-480">Kamera</th>
 													<th>Merek</th>
 													<th>Tahun</th>
+													<th>Jenis</th>
 													<th>Warna</th>
-													<th>Kursi</th>
-
-
-													<th>
-														No Polisi
-													</th>
-													<th class="hidden-480">Perjalanan</th>
-
+													<th>Harga</th>
 													<th>Gambar</th>
 												</tr>
 											</thead>
@@ -48,29 +42,22 @@ $do = new ClassMobil();
 											<tbody>
 											<?php 
 											$no = 1;
-											foreach ($do->selectMobilKotaHarga() as $value) {
+											foreach ($do->selectKameraMerkHarga() as $value) {
 												//$m = $do->selectOneMobil($value[1]);
 												//$n = $do->selectOneKota($value[2]);
 												//$o = $do->selectOneMerek('namaMerek');
 												echo "<tr>
-												<td class='hidden-480'>$value[nama]
+												<td class='hidden-480'>$value[namaMerek]
 														
 													</td> 
 													<td>
-														$value[namaMerek]
-													</td>
-													<td>
-														$value[tahun]
+														$value[seri]
 													</td>
 													
+													<td>$value[tahun]</td>
+													<td>$value[jenis]</td>
+													<td>$value[harga]</td>
 													<td>$value[warna]</td>
-													<td>$value[kursi]</td>
-													<td>$value[no_plat]</td>
-
-													<td class='hidden-480'>
-													$value[kota_asal] - $value[kota_tujuan]
-													</td>
-
 													<td>
 														<img src='../gambar/".$value['gambar']."' width='100px' height='100px'/>
 													</td>

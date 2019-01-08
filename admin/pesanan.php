@@ -1,6 +1,6 @@
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <div class="main-content">
 				<div class="main-content-inner">
@@ -30,11 +30,10 @@ $do = new ClassMobil();
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>Nama Mobil</th>
+													<th>Kode Booking</th>
+													<th>Kamera</th>
 													<th>Warna</th>
-													<th>Tahun</th>
-													<th>Banyak Kursi</th>
-													<th>No polisi</th>
+													<th>Peminjam</th>
 													<th>Tanggal Pinjam</th>
 													<th>Tanggal Kembali</th>
 													<th>Harga</th>
@@ -45,20 +44,19 @@ $do = new ClassMobil();
 											<tbody>
 											<?php 
 											$no = 1;
-											foreach ($do->semuainfotagihan() as $value) {
+											foreach ($do->datapemesanan() as $value) {
 												echo "<tr>
 												<td>$no</td>
-												<td class='hidden-480'>$value[nama]
+												<td class='hidden-480'>$value[nobooking]
 														
 													</td> 
 													<td>
-														$value[warna]
+														$value[seri]
 													</td>
 													<td>
-														$value[tahun]
+														$value[warna]
 													</td>
-													<td>$value[kursi]</td>
-													<td>$value[no_plat]</td>
+													<td>$value[nama_lengkap]</td>
 													<td>$value[tgl_pinjam]</td>
 													<td>$value[tgl_kembali]</td>
 													<td>$value[harga]</td>

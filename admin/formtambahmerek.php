@@ -1,6 +1,6 @@
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <style type="text/css">
 	#container{
@@ -23,7 +23,7 @@ $do = new ClassMobil();
 </style>
 <div id="container">
 		<div id="merek">
-		<h2>TAMBAH MEREK</h2>
+		<h2>TAMBAH MEREK KAMERA</h2>
 		<form method="post">
 		<table>
 		<tr>

@@ -2,12 +2,12 @@
 /**
  *
  */
-class ClassMobil
+class ClassKamera
 {
   public $koneksi;
   function __construct()
   {
-    $this->koneksi = mysqli_connect("localhost","root","","rentalmobil");
+    $this->koneksi = mysqli_connect("localhost","root","","rentalkamera");
   }
 
   public function selectall($table)
@@ -55,10 +55,10 @@ class ClassMobil
     }
     return $msg;
   }
-  public function insertHarga($mobil, $kota, $harga)
+  public function insertHarga($kamera, $tipe, $harga)
   {
-    $query = mysqli_query($this->koneksi,"INSERT INTO harga(mobil,kota,harga) VALUES
-      ('$mobil', '$kota','$harga')");
+    $query = mysqli_query($this->koneksi,"INSERT INTO harga(kamera,tipe,harga) VALUES
+      ('$kamera', '$tipe','$harga')");
     if($query){
       $msg = 'success!';
     }else{
@@ -69,24 +69,24 @@ class ClassMobil
 
   public function selectMerek()
   {
-    $query = mysqli_query($this->koneksi,("SELECT * FROM kategori"));
+    $query = mysqli_query($this->koneksi,("SELECT * FROM merek"));
     while ($r = mysqli_fetch_array($query)) {
       $data[] = $r;
     }
     return $data;
   }
 
-  public function selectKota()
+  public function selectKategori()
   {
-    $query = mysqli_query($this->koneksi,"SELECT * FROM kota");
+    $query = mysqli_query($this->koneksi,"SELECT * FROM kategori");
     while ($r = mysqli_fetch_array($query)) {
       $data[] = $r;
     }
     return $data;
   }
-     public function selectOneKota($id)
+     public function selectTipe($id)
   {
-    $query = mysqli_query($this->koneksi,("SELECT * FROM kota WHERE id='$id'"));
+    $query = mysqli_query($this->koneksi,("SELECT * FROM kategori WHERE id='$id'"));
     $r = mysqli_fetch_array($query);
     return $r;
   }
@@ -172,9 +172,9 @@ class ClassMobil
     return $msg;
   }
 
-  public function selectMobil()
+  public function selectKamera()
   {
-    $query = mysqli_query($this->koneksi,"SELECT * FROM mobil");
+    $query = mysqli_query($this->koneksi,"SELECT * FROM kamera");
     while ($r = mysqli_fetch_array($query)) {
       $data[] = $r;
     }
@@ -197,8 +197,8 @@ class ClassMobil
     return $del;
   }
 
-  public function selectMobilKotaHarga(){
-    $query = mysqli_query($this->koneksi,"SELECT a.*, b.*, b.id as idMobil, c.*, d.merek as namaMerek FROM harga a, mobil b, kota c, kategori d WHERE a.mobil=b.id AND a.kota=c.id AND b.merek=d.id");
+  public function selectKameraMerkHarga(){
+    $query = mysqli_query($this->koneksi,"SELECT a.*, b.*, b.id as idKamera, c.merek as namaMerek, d.kategori as jenis FROM harga a, kamera b, merek c, kategori d WHERE a.kamera=b.id AND b.merek=c.id AND d.id=b.kategori");
     while ($r = mysqli_fetch_array($query)) {
       $data[] = $r;
     }
@@ -220,9 +220,9 @@ class ClassMobil
   }
 
 
-    public function selectOneMobil($id)
+    public function selectSatuKamera($id)
   {
-    $query = mysqli_query($this->koneksi,("SELECT * FROM mobil WHERE id='$id'"));
+    $query = mysqli_query($this->koneksi,("SELECT * FROM kamera WHERE id='$id'"));
     $r = mysqli_fetch_array($query);
     return $r;
   }
@@ -369,8 +369,8 @@ class ClassMobil
     }
     return $data;
   }
-  public function semuainfotagihan(){
-  $query = mysqli_query($this->koneksi,"SELECT a.*, b.*, c.* FROM reservasi a, customer b, mobil c WHERE a.user_id=b.id AND a.id_mobil=c.id");
+  public function datapemesanan(){
+  $query = mysqli_query($this->koneksi,"SELECT a.*, b.nama_lengkap, b.id, c.seri, c.merek, c.warna FROM reservasi a, customer b, kamera c WHERE a.user_id=b.id AND a.id_kamera=c.id");
   while ($r = mysqli_fetch_array($query)) {
     $data[] = $r;
     }

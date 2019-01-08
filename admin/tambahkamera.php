@@ -1,7 +1,7 @@
 
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
  <style type="text/css">
 	#container{
@@ -24,7 +24,7 @@ $do = new ClassMobil();
 <div id="container">
 <div id="merek">
 <form method="post" enctype="multipart/form-data">
-<h2>TAMBAH MOBIL</h2>
+<h2>FORM TAMBAH KAMERA</h2>
 <table>
 <tr><td width="100">Merek</td>
 <td width="20">:</td>
@@ -37,11 +37,20 @@ $do = new ClassMobil();
 								?>
 							</select>
 						</td></tr></br>
-<tr><td width="100">Nama Mobil</td><td width="20">:</td><td><input type="text" class="input" size="50" name="namaMobil" /> </td></tr>
-<tr><td width="100" valign="top">Tahun</td><td width="20" valign="top">:</td><td><input type="text" class="input" size="50" name="tahun" /></td></tr>
-<tr><td width="100">Warna</td><td width="20">:</td><td><input type="text" class="input" size="50" name="warna" /> </td></tr>
-<tr><td width="100">Banyak Kursi</td><td width="20">:</td><td><input type="text" class="input" size="50" name="kursi" /> </td></tr>
-<tr><td width="100">No plat</td><td width="20">:</td><td><input type="text" class="input" size="50" name="plat" /> </td></tr>
+<tr><td width="100">Seri Kamera</td><td width="20">:</td><td><input type="text" class="input" size="50" name="namaMobil" /> </td></tr>
+<tr><td width="100">Kategori</td><td width="20">:</td>
+	<td>
+		<select name="kategori">
+			<?php
+				foreach ($do->selectKategori() as $val) {
+					echo "<option value='$val[0]'>$val[1]</option>";
+				}
+			?>
+		</select>
+	</td>
+</tr>
+<tr><td width="100">Tahun</td><td width="20">:</td><td><input type="text" class="input" size="50" name="warna" /> </td></tr>
+<tr><td width="100">Warna</td><td width="20">:</td><td><input type="text" class="input" size="50" name="kursi" /> </td></tr>
 <tr><td width="100">Gambar</td><td width="20">:</td><td><input type="file" class="input" size="50" name="gambar" onchange="PreviewImage();" />  </td></tr>
 <tr><td width="100"></td><td width="20"></td><td><input type="submit" class="submit" value="Tambah Mobil" name="submit" /> <input type="reset" class="submit" value="Hapus"/></td></tr>
 </table>
@@ -80,18 +89,11 @@ if (isset($_POST['submit'])) {
 										<table id="simple-table" class="table  table-bordered table-hover">
 											<thead>
 												<tr>
-													<th class="hidden-480">Nama Mobil</th>
 													<th>Merek</th>
+													<th>Kategori</th>
 													<th>Tahun</th>
+													<th>Seri</th>
 													<th>Warna</th>
-													<th>Kursi</th>
-
-
-													<th>
-														No Polisi
-													</th>
-													<th class="hidden-480">Perjalanan</th>
-
 													<th>Pengaturan</th>
 												</tr>
 											</thead>
@@ -99,27 +101,21 @@ if (isset($_POST['submit'])) {
 											<tbody>
 											<?php 
 											$no = 1;
-											foreach ($do->selectMobilKotaHarga() as $value) {
+											foreach ($do->selectKameraMerkHarga() as $value) {
 
 												echo "<tr>
-												<td class='hidden-480'>$value[nama]
+												<td class='hidden-480'>$value[namaMerek]
 														
 													</td> 
 													<td>
-														$value[namaMerek]
+														$value[kategori]
 													</td>
 													<td>
 														$value[tahun]
 													</td>
 													
+													<td>$value[seri]</td>
 													<td>$value[warna]</td>
-													<td>$value[kursi]</td>
-													<td>$value[no_plat]</td>
-
-													<td class='hidden-480'>
-													$value[kota_asal] - $value[kota_tujuan]
-													</td>
-
 													<td>
 														<div class='hidden-sm hidden-xs btn-group'>
 

@@ -1,6 +1,6 @@
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <div class="main-content">
 				<div class="main-content-inner">
@@ -61,6 +61,14 @@ $do = new ClassMobil();
 															<a href='prosestambahhapus.php?hapusUser=$value[0]'>
 															<button class='btn btn-xs btn-danger' name='hapus'>
 																<i class='ace-icon fa fa-trash-o bigger-120'></i>
+															</button>
+															</a>
+														</div>
+														
+														<div class='hidden-sm hidden-xs btn-group'>
+															<a href='prosestambahhapus.php?hapusUser=$value[0]'>
+															<button class='btn btn-xs btn-info' name='hapus'>
+																<i class='ace-icon fa fa-gear bigger-120'></i>
 															</button>
 															</a>
 														</div>

@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Dashboard - Admin Rental Mobil</title>
+		<title>Dashboard - Admin Rental Kamera</title>
 
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -59,7 +59,7 @@
 				<div class="navbar-header pull-left">
 					<a href="awal.php" class="navbar-brand">
 						<small>
-							Admin Rental Mobil
+							Admin Rentalku
 						</small>
 					</a>
 				</div>
@@ -123,9 +123,9 @@
 
 				<ul class="nav nav-list">
 					<li class="">
-						<a href="awal.php?daftarmobil">
+						<a href="awal.php?daftarkamera">
 							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> Daftar mobil </span>
+							<span class="menu-text"> Daftar kamera </span>
 
 						</a>
 					
@@ -150,18 +150,18 @@
 							</li>
 
 							<li class="">
-								<a href="awal.php?tambahmobil">
+								<a href="awal.php?tambahkamera">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Tambah Mobil
+									Tambah Kamera
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 
 							<li class="">
-								<a href="awal.php?kota">
+								<a href="awal.php?kategori">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Perjalanan
+									Kategori Kamera
 								</a>
 
 								<b class="arrow"></b>
@@ -169,7 +169,7 @@
 							<li class="">
 								<a href="awal.php?harga">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Harga Mobil
+									Harga Sewa Kamera
 								</a>
 
 								<b class="arrow"></b>
@@ -200,18 +200,18 @@
 			<div class="main-content">
 				<div class="main-content-inner">
 				<?php 
-				if (isset($_GET['daftarmobil'])){
-				require_once "daftarmobil.php";
+				if (isset($_GET['daftarkamera'])){
+				require_once "daftarkamera.php";
 				}else if (isset($_GET['tambahmerek'])) {
 				require_once 'formtambahmerek.php';
-				}else if (isset($_GET['kota'])) {
-				require_once 'formtambahkota.php';	
+				}else if (isset($_GET['kategori'])) {
+				require_once 'formkategori.php';	
 				}else if (isset($_GET['daftaruser'])) {
 				require_once 'listuser.php';
 				}else if (isset($_GET['harga'])) {
-				require_once 'formtambahharga.php';
-				}else if (isset($_GET['tambahmobil'])) {
-				require_once 'formtambahmobil.php';
+				require_once 'tambahharga.php';
+				}else if (isset($_GET['tambahkamera'])) {
+				require_once 'tambahkamera.php';
 				}else if(isset($_GET['daftarpesanan'])){
 				require_once 'pesanan.php';
 				}
@@ -227,8 +227,8 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Rental Mobil</span>
-							&copy; 2017-2018
+							<span class="blue bolder">Rentalku</span>
+							&copy; 2018-2019
 						</span>
 
 						&nbsp; &nbsp;

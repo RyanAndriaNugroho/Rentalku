@@ -1,8 +1,8 @@
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
- <style type="text/css">
+  <style type="text/css">
 	#container{
 		padding: 10px;
 	}
@@ -18,38 +18,50 @@ $do = new ClassMobil();
 	}
 
 </style>
-<div id="container">
-		<div id="merek">
-		<h2>TAMBAH JARAK KOTA</h2>
+ <div id="container">
+		<div id="mobil">
 		<form method="post">
-		<table>
-		<tr>
-			<td>Kota asal &nbsp &nbsp</td>
-			<td><input type="text" name="kota_asal"> &nbsp &nbsp</td>
-			<td>Kota Tujuan &nbsp &nbsp</td>
-			<td><input type="text" name="kota_tujuan"></td>
-
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-			<input type="submit" name="save" value="save" class="submit">
-			</td>
-		</tr>
-		</table>
+		<h2>HARGA SEWA KAMERA</h2>
+			 <table>
+			 	<tr><td width="100">Kamera</td>
+				<td width="20">:</td>
+						<td>
+							<select name="kamera">
+								<?php
+								foreach ($do->selectKamera() as $val) {
+									echo "<option value='$val[0]'>$val[4]</option>";
+								}
+								?>
+							</select>
+						</td></tr>
+				<tr><td width="100">Kategori</td>
+				<td width="20">:</td>
+						<td>
+							<select name="kota">
+								<?php
+								foreach ($do->selectKategori() as $val) {
+									echo "<option value='$val[0]'>$val[1]</option>";
+								}
+								?>
+							</select>
+						</td></tr>
+				<tr><td width="100">Harga</td><td width="20">:</td><td><input type="text" class="input" size="50" name="harga" /> </td></tr>
+				<tr><td width="100"></td><td width="20"></td><td><input type="submit" class="submit" value="Tambah Harga" name="tambahHarga" /> 
+				<input type="reset" class="submit" value="reset"/></td></tr>
+			 </table>
 		</form>
 		<?php
-		if(isset($_POST['save'])){
-			$kota_asal = $_POST['kota_asal'];
-			$kota_tujuan = $_POST['kota_tujuan'];
-			$do->insertKota($kota_asal,$kota_tujuan);
+		if(isset($_POST['tambahHarga'])){
+			$kamera = $_POST['kamera'];
+			$tipe = $_POST['kategori'];
+			$harga = $_POST['harga'];
+			$do->insertHarga($kamera,$tipe,$harga);
 		}	
 		?>
-
  <div class="main-content">
 				<div class="main-content-inner">
-					<div class="page-content">
 
+					<div class="page-content">						
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
@@ -59,28 +71,31 @@ $do = new ClassMobil();
 											<thead>
 												<tr>
 													<th class="hidden-480">No</th>
-													<th>Kota Asal</th>
-													<th>Kota Tujuan</th>
+													<th>Seri Kamera</th>
+													<th>Tipe</th>
+													<th>Harga</th>
 													<th>Pengaturan</th>
 												</tr>
 											</thead>
 
 											<tbody>
 											<?php 
-											$row = $do->selectKota();
 											$no = 1;
-											foreach ($row as $val) {
+											foreach ($do->selectHarga() as $value) {
+											$m = $do->selectSatuKamera($value[1]);
+											$n = $do->selectTipe($value[2]);
 												echo "<tr>
 												<td class='hidden-480'>$no
 														
 													</td> 
 													<td>
-														$val[1]
+														$m[seri]
 													</td>
-													<td>$val[2]</td>
+													<td>$n[1]</td>
+													<td>$value[3]</td>
 													<td>
 														<div class='hidden-sm hidden-xs btn-group'>
-															<a href='prosestambahhapus.php?hapusKota=$val[0]'>
+															<a href='prosestambahhapus.php?hapusHarga=$value[0]'>
 															<button class='btn btn-xs btn-danger' name='hapus'>
 																<i class='ace-icon fa fa-trash-o bigger-120'></i>
 															</button>
