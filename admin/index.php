@@ -32,7 +32,7 @@
 
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 
 <?php 

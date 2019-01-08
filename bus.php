@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php 
 include 'admin/proses.php';
 
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <!DOCTYPE HTML>
 <html>
