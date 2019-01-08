@@ -7,12 +7,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php 
 include 'admin/proses.php';
 
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Rental mobil</title>
+<title>Rental Kamera</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Green Wheels Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -80,10 +80,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
 	<div class="container">
 		<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-			<a href="index.php">Rental <span>Mobil</span></a>	
+			<a href="index.php">Rental <span>Kamera</span></a>	
 		</div>
 		<div class="bus wow fadeInUp animated" data-wow-delay=".5s">
-            <a href="bus.php" class="buses active">Daftar mobil</a>
+            <a href="bus.php" class="buses active">Daftar Kamera</a>
         </div>
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
 			<li><i class="fa fa-lock"></i></li>
@@ -129,7 +129,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--- banner-1 ---->
 <div class="banner-1 ">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Rental Mobil - Sewa mobil Murah</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Rental Kamera Murah</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->

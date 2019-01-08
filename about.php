@@ -6,12 +6,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php 
 include 'admin/proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Rental mobil</title>
+<title>Rental Kamera</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Green Wheels Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -79,10 +79,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
 	<div class="container">
 		<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-			<a href="index.php">Rental <span>Mobil</span></a>	
+			<a href="index.php">Rental <span>Kamera</span></a>	
 		</div>
 		<div class="bus wow fadeInUp animated" data-wow-delay=".5s">
-            <a href="bus.php" class="buses active">Daftar Mobil</a>
+            <a href="bus.php" class="buses active">Daftar Kamera</a>
         </div>
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
 			<li><i class="fa fa-lock"></i></li>
@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--- banner-1 ---->
 <div class="banner-1">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Rental Mobil - Sewa mobil Murah</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Rental Kamera Murah</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
@@ -137,22 +137,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="about-top wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">
 			<h2>Profil singkat</h2>
-			<p>Rental Mobil ini merupakan salah satu penyedia layanan rental mobil di Pamekasan. Menggunakan armada mobil keluaran baru, dengan kondisi terawat untuk disewakan kepada Anda. Dengan pilihan mobil yang kami sediakan sangat variatif dan harga yang sangat kompetitif di Pamekasan.  Kami menawarkan untuk Anda seperti: rental alphard, rental vellfire, sewa camry, Toyota Innova, Daihatsu Xenia, Avanza, Suzuki APV, Nissan, Grand Livina, Luxio. Anda dapat menyewa untuk harian maupun bulanan.</p>
+			<p>Rental Kamera ini merupakan salah satu penyedia layanan rental kamera yang menyediakan barang barang dengan kwalitas terbaik.</p>
 		</div>
 		<div class="about-mid">
 			<div class="col-md-6 abt-lft wow fadeInLeft animated" data-wow-delay=".5s">
 				<h3>Mission</h3>
-				<p>Kami selalu berusaha untuk menyediakan kendaraan yang terbaru dan optimal untuk perjalanan anda dan kami akan membangun kinerja yang memuaskan untuk klien kami..</p>
+				<p>Kami selalu berusaha untuk menyediakan kamera dengan kwalitas terbaik</p>
 				</div>
 			<div class="col-md-6 abt-lft wow fadeInRight animated" data-wow-delay=".5s">
 				<h3>Visi</h3>
-				<p>Menjadi perusahaan transportasi ataupun rekan kerja yang menyediakan jasa penyewaan mobil yang dapat diandalkan. Kami berupaya untuk menempatkan diri sebagai perusahaan rental mobil terdepan di kawasan Pamekasan.</p>
+				<p>Menjadi perusahaan rental kamera yang amanah dan barokah</p>
 				</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="about-top wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">
 			<h2>Servis Gratis</h2>
-			<p>Customer akan kami berikan fasilitas bebas perawatan kendaraan selama dalam masa rental atau kontrak kendaraan, terkecuali jika kendaraan rusak akibat kelalaian atau kesalahan penggunaan..</p>
+			<p>Customer akan kami berikan fasilitas bebas perawatan lensa dan peralatan lainnya.</p>
 		</div>
 			<div class="clearfix"></div>
 		</div>
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="footer-top">
 	<div class="container">
 		<div class="col-md-6 footer-left wow fadeInLeft animated" data-wow-delay=".5s">
-			<h3>Kategori Mobil</h3>
+			<h3>Kategori Kamera</h3>
 				<ul>
 				 <?php
 			$row = $do->selectMerek();
@@ -177,6 +177,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"></div>
 				</ul>
 		</div>
+		<!--
 		<div class="col-md-6 footer-left wow fadeInRight animated" data-wow-delay=".5s">
 			<h3>Perjalanan</h3>
 				<ul>
@@ -190,6 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			?>
 				</ul>
 		</div>
+	-->
 		<div class="clearfix"></div>
 	</div>
 </div>

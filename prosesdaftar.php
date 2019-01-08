@@ -1,7 +1,7 @@
 <?php 
 
 include 'admin/proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
 
 if (isset($_POST['daftar'])) {
 	$nama = $_POST['nama'];
