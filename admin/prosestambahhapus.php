@@ -4,8 +4,8 @@ $do = new ClassKamera();
  ?>
 <?php 
 
-if (isset($_GET['hapusKota'])) {
-	$id = $_GET['hapusKota'];
+if (isset($_GET['hapusKategori'])) {
+	$id = $_GET['hapusKategori'];
 	$do->deleteKota($id);
 }else if (isset($_GET['hapusUser'])) {
 	$id = $_GET['hapusUser'];

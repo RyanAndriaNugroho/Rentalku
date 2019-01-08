@@ -74,9 +74,17 @@ $do = new ClassKamera();
 													<td>$val[1]</td>
 													<td>
 														<div class='hidden-sm hidden-xs btn-group'>
-															<a href='prosestambahhapus.php?hapusKota=$val[0]'>
+															<a href='prosestambahhapus.php?hapusKategori=$val[0]'>
 															<button class='btn btn-xs btn-danger' name='hapus'>
 																<i class='ace-icon fa fa-trash-o bigger-120'></i>
+															</button>
+															</a>
+														</div>
+														
+														<div class='hidden-sm hidden-xs btn-group'>
+															<a href='prosestambahhapus.php?editKategori=$val[0]'>
+															<button class='btn btn-xs btn-info' name='ubah'>
+																<i class='ace-icon fa fa-gear bigger-120'></i>
 															</button>
 															</a>
 														</div>

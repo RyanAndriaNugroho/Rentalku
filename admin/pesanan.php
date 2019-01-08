@@ -37,6 +37,7 @@ $do = new ClassKamera();
 													<th>Tanggal Pinjam</th>
 													<th>Tanggal Kembali</th>
 													<th>Harga</th>
+													<th>Status</th>
 													<th>Aksi</th>
 												</tr>
 											</thead>
@@ -45,6 +46,7 @@ $do = new ClassKamera();
 											<?php 
 											$no = 1;
 											foreach ($do->datapemesanan() as $value) {
+												$status = $value[7];
 												echo "<tr>
 												<td>$no</td>
 												<td class='hidden-480'>$value[nobooking]
@@ -60,7 +62,30 @@ $do = new ClassKamera();
 													<td>$value[tgl_pinjam]</td>
 													<td>$value[tgl_kembali]</td>
 													<td>$value[harga]</td>
-														<td>
+													<td>";
+													if($status=="1")
+													{
+														echo "Lunas </td> <td>
+														<div class='hidden-sm hidden-xs btn-group'>
+															<a href='prosestambahhapus.php?editKategori=$value[0]'>
+															<button class='btn btn-xs btn-warning' name='validasi'>
+																<i class='ace-icon fa fa-remove bigger-120'></i>
+															</button>
+															</a>
+														</div>";
+													}
+													else
+													{
+														echo "Belum Lunas </td> <td>
+														<div class='hidden-sm hidden-xs btn-group'>
+															<a href='prosestambahhapus.php?editKategori=$value[0]'>
+															<button class='btn btn-xs btn-success' name='validasi'>
+																<i class='ace-icon fa fa-check bigger-120'></i>
+															</button>
+															</a>
+														</div>";
+													}
+														echo"
 														<div class='hidden-sm hidden-xs btn-group'>
 															<a href='prosestambahhapus.php?hapusPesanan=$value[0]'>
 															<button class='btn btn-xs btn-danger' name='hapus'>
@@ -68,7 +93,6 @@ $do = new ClassKamera();
 															</button>
 															</a>
 														</div>
-
 														<div class='hidden-md hidden-lg'>
 															<div class='inline pos-rel'>
 

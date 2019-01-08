@@ -30,8 +30,9 @@ $do = new ClassKamera();
 											<thead>
 												<tr>
 													<th>No</th>
-													<th class="hidden-480">Nama lengkap</th>
+													<th>Nama lengkap</th>
 													<th>Username</th>
+													<th>Password</th>
 													<th>Alamat</th>
 													<th>Telepon</th>
 													<th>No KTP</th>
@@ -45,15 +46,10 @@ $do = new ClassKamera();
 											foreach ($do->selectSemuaCustomer() as $value) {
 												echo "<tr>
 												<td>$no</td>
-												<td class='hidden-480'>$value[1]
-														
-													</td> 
-													<td>
-														$value[2]
-													</td>
-													<td>
-														$value[3]
-													</td>
+												<td>$value[1]</td> 
+													<td>$value[2]</td>
+													<td>$value[5]</td>
+													<td>$value[3]</td>
 													<td>$value[4]</td>
 													<td>$value[6]</td>
 														<td>
@@ -66,8 +62,8 @@ $do = new ClassKamera();
 														</div>
 														
 														<div class='hidden-sm hidden-xs btn-group'>
-															<a href='prosestambahhapus.php?hapusUser=$value[0]'>
-															<button class='btn btn-xs btn-info' name='hapus'>
+															<a href='prosestambahhapus.php?editUser=$value[0]'>
+															<button class='btn btn-xs btn-info' name='ubah'>
 																<i class='ace-icon fa fa-gear bigger-120'></i>
 															</button>
 															</a>

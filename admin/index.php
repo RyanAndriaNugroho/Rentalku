@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rental Mobil - Login Admin</title>
+    <title>Rentalku - Login Admin</title>
     
     <!-- Skrip CSS -->
    <link rel="stylesheet" href="../css/admin.css"/>
@@ -32,7 +32,7 @@
 
 <?php 
 include 'proses.php';
-$do = new ClassMobil();
+$do = new ClassKamera();
  ?>
 
 <?php 

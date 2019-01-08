@@ -78,6 +78,14 @@ $do = new ClassKamera();
 															</button>
 															</a>
 														</div>
+														
+														<div class='hidden-sm hidden-xs btn-group'>
+															<a href='prosestambahhapus.php?editMerek=$val[0]'>
+															<button class='btn btn-xs btn-info' name='ubah'>
+																<i class='ace-icon fa fa-gear bigger-120'></i>
+															</button>
+															</a>
+														</div>
 
 														<div class='hidden-md hidden-lg'>
 															<div class='inline pos-rel'>

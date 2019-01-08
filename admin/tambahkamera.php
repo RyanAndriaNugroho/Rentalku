@@ -118,13 +118,19 @@ if (isset($_POST['submit'])) {
 													<td>$value[warna]</td>
 													<td>
 														<div class='hidden-sm hidden-xs btn-group'>
-
 															<a href='prosestambahhapus.php?hapusMobil=$value[0]'>
 															<button class='btn btn-xs btn-danger'>
 																<i class='ace-icon fa fa-trash-o bigger-120'></i>
 															</button>
 															</a>
-
+														</div>
+														
+														<div class='hidden-sm hidden-xs btn-group'>
+															<a href='prosestambahhapus.php?editKamera=$value[0]'>
+															<button class='btn btn-xs btn-info' name='ubah'>
+																<i class='ace-icon fa fa-gear bigger-120'></i>
+															</button>
+															</a>
 														</div>
 
 														<div class='hidden-md hidden-lg'>
